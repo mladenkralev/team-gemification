@@ -1,0 +1,22 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  padding: 24px;
+  background-color: #f8f8fb;
+  overflow-y: auto;
+}
+
+.card-row {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.content-body {
+  padding-top: 24px;
+}
+

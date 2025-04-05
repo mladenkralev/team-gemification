@@ -1,0 +1,22 @@
+<div class="dashboard-container">
+  <app-sidebar></app-sidebar>
+
+  <div class="main-content">
+    <app-topbar></app-topbar>
+
+    <div class="content-body">
+      <div class="card-row">
+        <app-progress-card
+          *ngFor="let item of cardItems"
+          [icon]="item.icon"
+          [iconColor]="item.iconColor"
+          [rank]="item.rank"
+          [category]="item.category"
+          [progressToNext]="item.progressToNext"
+          [pointsNeeded]="item.pointsNeeded"
+          style="flex: 0 1 350px;">
+        </app-progress-card>
+      </div>
+    </div>
+  </div>
+</div>

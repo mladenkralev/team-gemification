@@ -1,0 +1,17 @@
+
+.card-leaderboard {
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  background-color: #fff;
+}
+
+.card-leaderboard:hover {
+  transform: translateY(-5px);
+}
+
+.rank-badge {
+  font-weight: bold;
+  color: #444;
+}

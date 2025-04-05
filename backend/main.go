@@ -8,7 +8,18 @@ import (
 )
 
 func main() {
-	dist := "../awesomeProject/frontend/dist/frontend/browser"
+	baseDir, err := os.Getwd()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Get the parent directory of the current working directory
+	parentDir := filepath.Dir(baseDir)
+
+	// Resolve the 'frontend' directory inside the parent directory
+	dist := filepath.Join(parentDir, "frontend", "dist", "frontend", "browser")
+
+	log.Printf("Path currently is %s", dist)
 	serveAngularApp(dist)
 }
 
