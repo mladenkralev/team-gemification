@@ -1,0 +1,26 @@
+.kudos-available-box {
+  background: #FFEFE2; /* light yellow */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.kudos-available-box .title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #92400e;
+}
+
+.kudos-available-box .points {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #f59e0b;
+}
+
+.kudos-available-box .subtext {
+  font-size: 14px;
+  color: #92400e;
+}

@@ -1,0 +1,10 @@
+<div class="leaderboard-box">
+  <h4>Top Team Members</h4>
+  <ul class="leaderboard-list">
+    <li *ngFor="let user of topUsers">
+      <span class="rank">#{{ user.rank }}</span>
+      <span class="name">{{ user.name }}</span>
+      <span class="points">{{ user.points }} pts</span>
+    </li>
+  </ul>
+</div>

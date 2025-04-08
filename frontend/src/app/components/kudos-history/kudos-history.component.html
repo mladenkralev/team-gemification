@@ -1,0 +1,15 @@
+<div class="kudos-history-widget">
+  <h4 class="">Recent Kudos Activity</h4>
+
+  <div class="entry" *ngFor="let item of history; let last = last">
+    <div class="date-box">
+      <div class="day">{{ item.date | date: 'd' }}</div>
+      <div class="month">{{ item.date | date: 'MMM' }}</div>
+    </div>
+    <div class="message">
+      <strong>{{ item.from }}</strong> gave <strong>{{ item.to }}</strong>
+      <strong>{{ item.points }} point{{ item.points > 1 ? 's' : '' }}</strong>
+    </div>
+    <hr *ngIf="!last">
+  </div>
+</div>

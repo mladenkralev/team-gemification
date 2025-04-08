@@ -4,19 +4,34 @@
   <div class="main-content">
     <app-topbar></app-topbar>
 
-    <div class="content-body">
-      <div class="card-row">
-        <app-progress-card
-          *ngFor="let item of cardItems"
-          [icon]="item.icon"
-          [iconColor]="item.iconColor"
-          [rank]="item.rank"
-          [category]="item.category"
-          [progressToNext]="item.progressToNext"
-          [pointsNeeded]="item.pointsNeeded"
-          style="flex: 0 1 350px;">
-        </app-progress-card>
+    <div class="dashboard-body">
+
+      <!-- LEFT SIDE (Progress Cards) -->
+      <div class="dashboard-left">
+        <div class="card-row">
+          <app-progress-card
+            *ngFor="let item of cardItems"
+            [icon]="item.icon"
+            [iconColor]="item.iconColor"
+            [rank]="item.rank"
+            [category]="item.category"
+            [progressToNext]="item.progressToNext"
+            [pointsNeeded]="item.pointsNeeded"
+            style="flex: 0 1 350px;">
+          </app-progress-card>
+        </div>
       </div>
+
+      <!-- RIGHT SIDE (Goals + Kudos Left + Kudos History) -->
+      <div class="dashboard-right">
+        <app-kudos-available [availablePoints]="2"></app-kudos-available>
+        <div class="spacer"></div>
+        <app-kudos-history></app-kudos-history>
+        <div class="spacer"></div>
+        <app-global-leaderboard></app-global-leaderboard>
+        <div class="spacer"></div>
+      </div>
+
     </div>
   </div>
 </div>
