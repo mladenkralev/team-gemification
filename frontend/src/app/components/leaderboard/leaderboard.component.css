@@ -1,9 +1,12 @@
 /* Centering and spacing */
 .leaderboard-wrapper {
+  max-width: 600px;
+  margin: 48px auto;
+  padding: 32px;
   background: #ffffff;
-  padding: 20px;
   border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  text-align: left;
 }
 
 /* Heading styling */
@@ -21,7 +24,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 14px 0;
   border-bottom: 1px solid #f1f1f1;
   font-size: 1rem;
 }
@@ -52,18 +55,3 @@ ng-template p {
   color: #888;
   text-align: center;
 }
-
-/* Alternate row colors */
-.leaderboard-item:nth-child(even) {
-  background-color: #f9fafb; /* subtle light gray */
-  border-radius: 12px;
-}
-
-/* Optional: hover effect */
-.leaderboard-item:hover {
-  background-color: #f0f9ff; /* soft blue */
-  transition: background-color 0.3s ease;
-  cursor: default;
-}
-
-

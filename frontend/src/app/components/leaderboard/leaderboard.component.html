@@ -1,8 +1,8 @@
 <div class="leaderboard-wrapper">
-  <h2 class="h3 fw-bold mb-4">🏆 Leaderboard: {{ category }}</h2>
+  <h2>🏆 Leaderboard </h2>
 
-  <ng-container *ngIf="leaderboard.length > 0; else empty">
-    <div *ngFor="let member of leaderboard; let i = index" class="leaderboard-item">
+  <ng-container *ngIf="topUsers.length > 0; else empty">
+    <div *ngFor="let member of topUsers; let i = index" class="leaderboard-item">
       <span class="rank">#{{ i + 1 }}</span>
       <span class="name">{{ member.name }}</span>
       <span class="points">{{ member.points }} pts</span>

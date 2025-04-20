@@ -1,0 +1,30 @@
+<div class="give-kudos-box">
+  <h4>
+    Give Kudos 🎉
+    <span class="badge bg-success ms-2">{{ kudosLeft }} Kudos Left</span>
+  </h4>
+
+  <label>To:</label>
+  <select [(ngModel)]="selectedUser">
+    <option *ngFor="let user of users" [value]="user">{{ user }}</option>
+  </select>
+
+  <label>Category:</label>
+  <select [(ngModel)]="selectedCategory">
+    <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+  </select>
+
+  <label>Message (optional):</label>
+  <textarea [(ngModel)]="message" rows="2" placeholder="Say something nice..."></textarea>
+
+  <button
+    [disabled]="kudosLeft <= 0"
+    class="btn btn-success w-100"
+    [@buttonPulse]="state"
+    (click)="giveKudos()">Give Kudos
+  </button>
+
+  <div *ngIf="successMessage" class="success">
+    {{ successMessage }}
+  </div>
+</div>

@@ -1,0 +1,79 @@
+/* History box container */
+.history-box {
+  background: #e0f2fe;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /*gap: 16px;*/
+}
+.title {
+  padding-left: 12px;
+}
+
+/* Each history entry */
+.entry {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+/* Alternate row background */
+.entry:nth-child(even) {
+  background-color: #dbeafe; /* lighter blue for even rows */
+}
+
+/* Hover effect */
+.entry:hover {
+  background-color: #bfdbfe; /* stronger blue on hover */
+  cursor: default;
+}
+
+/* Date box */
+.date-box {
+  background: #bfdbfe;
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #1e3a8a;
+  font-size: 14px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* Day and Month text */
+.date-box .day {
+  font-size: 16px;
+}
+
+.date-box .month {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* Message */
+.message {
+  font-size: 14px;
+  color: #333;
+}
+
+/* No need for manual hr now (optional cleanup) */
+hr {
+  display: none;
+}
+
+.spacer {
+  display: none; /* optional: hide if you're using margin-bottom on title */
+}

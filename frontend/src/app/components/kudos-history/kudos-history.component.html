@@ -1,6 +1,11 @@
-<div class="kudos-history-widget">
-  <h4 class="">Recent Kudos Activity</h4>
-
+<div
+  [@hoverEffect]="state"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+  (click)="triggerHistoryClick()"
+  class="kudos-history-widget">
+  <h4 class="title">🕰️ Recent Kudos Activity </h4>
+  <div class="spacer"></div>
   <div class="entry" *ngFor="let item of history; let last = last">
     <div class="date-box">
       <div class="day">{{ item.date | date: 'd' }}</div>
@@ -8,7 +13,7 @@
     </div>
     <div class="message">
       <strong>{{ item.from }}</strong> gave <strong>{{ item.to }}</strong>
-      <strong>{{ item.points }} point{{ item.points > 1 ? 's' : '' }}</strong>
+      <strong> {{ item.points }} point{{ item.points > 1 ? 's' : '' }}</strong>
     </div>
     <hr *ngIf="!last">
   </div>

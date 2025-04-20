@@ -7,10 +7,6 @@
   background-color: #fff;
 }
 
-.card-leaderboard:hover {
-  transform: translateY(-5px);
-}
-
 .rank-badge {
   font-weight: bold;
   color: #444;

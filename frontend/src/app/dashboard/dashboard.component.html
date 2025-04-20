@@ -1,37 +1,27 @@
-<div class="dashboard-container">
-  <app-sidebar></app-sidebar>
-
-  <div class="main-content">
-    <app-topbar></app-topbar>
-
-    <div class="dashboard-body">
-
-      <!-- LEFT SIDE (Progress Cards) -->
-      <div class="dashboard-left">
-        <div class="card-row">
-          <app-progress-card
-            *ngFor="let item of cardItems"
-            [icon]="item.icon"
-            [iconColor]="item.iconColor"
-            [rank]="item.rank"
-            [category]="item.category"
-            [progressToNext]="item.progressToNext"
-            [pointsNeeded]="item.pointsNeeded"
-            style="flex: 0 1 350px;">
-          </app-progress-card>
-        </div>
-      </div>
-
-      <!-- RIGHT SIDE (Goals + Kudos Left + Kudos History) -->
-      <div class="dashboard-right">
-        <app-kudos-available [availablePoints]="2"></app-kudos-available>
-        <div class="spacer"></div>
-        <app-kudos-history></app-kudos-history>
-        <div class="spacer"></div>
-        <app-global-leaderboard></app-global-leaderboard>
-        <div class="spacer"></div>
-      </div>
-
+<div class="dashboard-body">
+  <!-- LEFT SIDE (Progress Cards) -->
+  <div class="dashboard-left">
+    <div class="card-row">
+      <app-progress-card
+        *ngFor="let item of cardItems"
+        [icon]="item.icon"
+        [iconColor]="item.iconColor"
+        [rank]="item.rank"
+        [category]="item.category"
+        [progressToNext]="item.progressToNext"
+        [pointsNeeded]="item.pointsNeeded"
+        (cardClick)="goToLeaderboard($event)"
+        style="flex: 0 1 350px;">
+      </app-progress-card>
     </div>
+  </div>
+
+  <!-- RIGHT SIDE (Give Kudos + History + Leaderboard) -->
+  <div class="dashboard-right">
+    <app-give-kudos></app-give-kudos>
+    <div class="spacer"></div>
+    <app-kudos-history></app-kudos-history>
+    <app-leaderboard></app-leaderboard>
+    <div class="spacer"></div>
   </div>
 </div>
